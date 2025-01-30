@@ -46,13 +46,12 @@
             z-index: 10;
         }
 
-        #transparent-button {
+        #second-button {
             position: absolute;
-            top: 7%; /* Umieszcza przycisk niżej */
-            left: 70%;
-            transform: translateX(-50%);
-            width: 70px; /* Dopasuj rozmiar do obrazu */
-            height: 70px; /* Dopasuj rozmiar do obrazu */
+            top: 7%; /* Pozycja nowego przycisku */
+            left: 65%;
+            width: 70px;
+            height: 70px;
             background: transparent;
             border: none;
             cursor: pointer;
@@ -107,6 +106,9 @@
 
     <!-- Przezroczysty przycisk -->
     <button id="transparent-button" onclick="showGif()"></button>
+
+    <!-- Drugi przezroczysty przycisk -->
+    <button id="second-button" onclick="showGif()"></button>
 
     <!-- Modal z gifem (domyślnie ukryty) -->
     <div id="gif-modal" style="display: none;" onclick="hideGif()">
