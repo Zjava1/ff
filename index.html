@@ -74,11 +74,13 @@
     </style>
     <script>
         function showGif() {
-            document.getElementById('gif-modal').style.display = 'flex';
+            const modal = document.getElementById('gif-modal');
+            modal.style.display = 'flex';
         }
 
         function hideGif() {
-            document.getElementById('gif-modal').style.display = 'none';
+            const modal = document.getElementById('gif-modal');
+            modal.style.display = 'none';
         }
     </script>
 </head>
@@ -93,8 +95,8 @@
     <!-- Przezroczysty przycisk -->
     <button id="transparent-button" onclick="showGif()"></button>
 
-    <!-- Modal z gifem -->
-    <div id="gif-modal" onclick="hideGif()">
+    <!-- Modal z gifem (domyślnie ukryty) -->
+    <div id="gif-modal" style="display: none;" onclick="hideGif()">
         <img src="yay.gif" alt="Zapętlony GIF">
     </div>
 
