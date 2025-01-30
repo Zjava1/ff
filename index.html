@@ -28,7 +28,7 @@
 
         #image2 {
             position: absolute;
-            top: 714px;
+            top: 16.67%; /* Umieszcza obraz w 2/6 wysokości strony */
             left: 50%;
             transform: translateX(-50%);
         }
@@ -59,6 +59,13 @@
             max-width: 90%;
             max-height: 90%;
         }
+
+        button {
+            background: none;
+            border: none;
+            padding: 0;
+            cursor: pointer;
+        }
     </style>
     <script>
         function showGif() {
@@ -78,8 +85,10 @@
     <!-- Obraz drugi -->
     <img id="image2" src="tak.png" alt="Obraz 2">
 
-    <!-- Nałożony obraz z akcją kliknięcia -->
-    <img id="overlay" src="kwadraty.png" alt="Kliknij, aby zobaczyć gif" onclick="showGif()">
+    <!-- Nałożony obraz jako przycisk -->
+    <button id="overlay" onclick="showGif()">
+        <img src="kwadraty.png" alt="Kliknij, aby zobaczyć gif">
+    </button>
 
     <!-- Modal z gifem -->
     <div id="gif-modal" onclick="hideGif()">
