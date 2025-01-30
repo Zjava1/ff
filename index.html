@@ -33,12 +33,17 @@
             transform: translateX(-50%);
         }
 
-        #overlay {
+        #transparent-button {
             position: absolute;
-            top: 714px;
+            top: 11%; /* Umieszcza przycisk w 2/6 wysokości strony */
             left: 50%;
             transform: translateX(-50%);
+            width: 100px; /* Dopasuj rozmiar do obrazu */
+            height: 100px; /* Dopasuj rozmiar do obrazu */
+            background: transparent;
+            border: none;
             cursor: pointer;
+            z-index: 10;
         }
 
         #gif-modal {
@@ -85,10 +90,8 @@
     <!-- Obraz drugi -->
     <img id="image2" src="tak.png" alt="Obraz 2">
 
-    <!-- Nałożony obraz jako przycisk -->
-    <button id="overlay" onclick="showGif()">
-        <img src="kwadraty.png" alt="Kliknij, aby zobaczyć gif">
-    </button>
+    <!-- Przezroczysty przycisk -->
+    <button id="transparent-button" onclick="showGif()"></button>
 
     <!-- Modal z gifem -->
     <div id="gif-modal" onclick="hideGif()">
